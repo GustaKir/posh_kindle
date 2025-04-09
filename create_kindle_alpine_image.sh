@@ -60,7 +60,7 @@ sh"
 STARTGUI='#!/bin/sh
 chmod a+w /dev/shm # Otherwise the alpine user cannot use this (needed for chromium)
 SIZE=$(xwininfo -root -display :0 | egrep "geometry" | cut -d " "  -f4)
-env DISPLAY=:0 Xephyr :1 -title "L:D_N:application_ID:xephyr" -ac -br -screen $SIZE -cc 4 -reset -terminate & sleep 3 && su alpine -c "env DISPLAY=:1 mate-session"
+env DISPLAY=:0 Xephyr :1 -title "L:D_N:application_ID:xephyr" -ac -br -screen $SIZE -cc 4 -reset -terminate & sleep 3 && su alpine -c "env DISPLAY=:1 phosh-session"
 killall Xephyr'
 
 
