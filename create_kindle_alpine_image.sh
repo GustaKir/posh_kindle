@@ -25,7 +25,8 @@ mkdir /run/dbus
 apk update
 apk upgrade
 cat /etc/alpine-release
-apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git
+apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git seatd xdg-desktop-portal-phosh phosh-wallpapers phosh-mobile-
+settings squeekboard phoc phosh-portalsconf phosh-mobile-settings-lang phosh-lang libphosh
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco
 apk add \$(apk search phosh -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add \$(apk search -q ttf- | grep -v '\-doc')
