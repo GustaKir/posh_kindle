@@ -1,3 +1,5 @@
+# technically this is a partial port of [postmarketos using a existing alpine install](https://wiki.postmarketos.org/wiki/Existing_Alpine_installation)
+
 # Alpine Linux on Kindle
 Here you find a set of utilities to get [Alpine Linux](https://alpinelinux.org/) running on Kindles. So far this has been tested on Paperwhite 3 only, but it should work on any Kindle (not Kindle Fire though) that has a touchscreen and enough Flash/RAM (At least enough space beside your books/documents to save a >=2GB file and at least 512MiB RAM).
 
