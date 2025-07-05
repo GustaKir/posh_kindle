@@ -14,10 +14,10 @@
 #              created image/install more packages/whatever. To finish the script just leave the sh shell with "exit"
 # STARGUI: This is the script that gets executed inside the container when the GUI is started. Xepyhr is used to render the desktop
 #          inside a window, that has the correct name to be displayed in fullscreen by the kindle's awesome windowmanager
-REPO="http://dl-cdn.alpinelinux.org/alpine"
+REPO="https://mirror.postmarketos.org/postmarketos/"
 MNT="/mnt/alpine"
 IMAGE="./alpine.ext3"
-IMAGESIZE=2048 #Megabytes
+IMAGESIZE=3096 #Megabytes
 ALPINESETUP="source /etc/profile
 echo kindle > /etc/hostname
 echo \"nameserver 8.8.8.8\" > /etc/resolv.conf
@@ -25,8 +25,7 @@ mkdir /run/dbus
 apk update
 apk upgrade
 cat /etc/alpine-release
-apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git seatd xdg-desktop-portal-phosh phosh-wallpapers phosh-mobile-
-settings squeekboard phoc phosh-portalsconf phosh-mobile-settings-lang phosh-lang libphosh
+apk add xorg-server-xephyr xwininfo xdotool xinput dbus-x11 sudo bash nano git seatd xdg-desktop-portal-phosh phosh-wallpapers phosh-mobile-settings squeekboard phoc phosh-portalsconf phosh-mobile-settings-lang phosh-lang libphosh
 apk add desktop-file-utils gtk-engines consolekit gtk-murrine-engine caja caja-extensions marco
 apk add \$(apk search phosh -q | grep -v '\-dev' | grep -v '\-lang' | grep -v '\-doc')
 apk add \$(apk search -q ttf- | grep -v '\-doc')
